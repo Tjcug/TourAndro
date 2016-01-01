@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import org.other.Constant.Constant;
+
 import tour.com.activity.MainActivity;
 import tour.com.activity.R;
 
@@ -31,6 +33,7 @@ public class ContentFragment extends BaseFragment{
     @Override
     public void onResume() {
         super.onResume();
+        MainActivity.currFragTag= Constant.FRAGMENT_FLAG_Contents;
     }
 
 }
