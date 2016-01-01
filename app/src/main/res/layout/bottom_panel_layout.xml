@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.other.ui.BottomControlPanel xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_alignParentBottom="true"
+    android:gravity="center_vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp" >
+
+    <org.other.ui.ImageText
+        android:id="@+id/btn_Content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true" />
+
+    <org.other.ui.ImageText
+        android:id="@+id/btn_Forum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn_Content" />
+
+    <org.other.ui.ImageText
+        android:id="@+id/btn_Assistant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn_Forum" />
+
+    <org.other.ui.ImageText
+        android:id="@+id/btn_Person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" />
+
+</org.other.ui.BottomControlPanel>
