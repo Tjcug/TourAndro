@@ -33,7 +33,7 @@ public class ContentFragment extends BaseFragment{
     @Override
     public void onResume() {
         super.onResume();
-        MainActivity.currFragTag= Constant.FRAGMENT_FLAG_Contents;
+        MainActivity.currFragTag= Constant.FRAGMENT_FLAG_Assistant;
     }
 
 }

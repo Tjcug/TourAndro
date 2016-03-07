@@ -8,22 +8,16 @@
     android:paddingRight="20dp" >
 
     <org.other.ui.ImageText
-        android:id="@+id/btn_Content"
+        android:id="@+id/btn_Forum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true" />
 
     <org.other.ui.ImageText
-        android:id="@+id/btn_Forum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/btn_Content" />
-
-    <org.other.ui.ImageText
         android:id="@+id/btn_Assistant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/btn_Forum" />
+        android:layout_centerHorizontal="true" />
 
     <org.other.ui.ImageText
         android:id="@+id/btn_Person"

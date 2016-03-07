@@ -27,7 +27,7 @@ public class MainActivity extends BaseActivity implements
         setContentView(R.layout.activity_main);
         initUI();
         fragmentManager = getFragmentManager();
-        setDefaultFirstFragment(Constant.FRAGMENT_FLAG_Contents);
+        setDefaultFirstFragment(Constant.FRAGMENT_FLAG_Assistant);
     }
 
     private void initUI() {
@@ -43,8 +43,6 @@ public class MainActivity extends BaseActivity implements
         String tag = "";
         if ((itemId & Constant.BTN_FLAG_Person) != 0) {
             tag = Constant.FRAGMENT_FLAG_Person;
-        } else if ((itemId & Constant.BTN_FLAG_Contents) != 0) {
-            tag = Constant.FRAGMENT_FLAG_Contents;
         } else if ((itemId & Constant.BTN_FLAG_Forum) != 0) {
             tag = Constant.FRAGMENT_FLAG_Forum;
         }
@@ -138,9 +136,7 @@ public class MainActivity extends BaseActivity implements
     public void setTabSelection(String tag) {
         // 开启一个Fragment事务
         fragmentTransaction = fragmentManager.beginTransaction();
-        if (TextUtils.equals(tag, Constant.FRAGMENT_FLAG_Contents)) {
-            Toast.makeText(MainActivity.this,"主页",Toast.LENGTH_LONG).show();
-        } else if (TextUtils.equals(tag, Constant.FRAGMENT_FLAG_Forum)) {
+        if (TextUtils.equals(tag, Constant.FRAGMENT_FLAG_Forum)) {
             Toast.makeText(MainActivity.this,"论坛",Toast.LENGTH_LONG).show();
         } else if (TextUtils.equals(tag, Constant.FRAGMENT_FLAG_Assistant)) {
             Toast.makeText(MainActivity.this,"私人助手",Toast.LENGTH_LONG).show();

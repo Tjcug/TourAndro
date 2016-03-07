@@ -1,6 +1,5 @@
 package org.other.ui;
 
-import org.other.Constant.Constant;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.AttributeSet;
@@ -11,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import org.other.Constant.Constant;
 
 import tour.com.activity.R;
 
@@ -71,9 +72,7 @@ public class ImageText extends LinearLayout{
 		}
 		int checkDrawableId = -1;
 		switch (itemID){
-		case Constant.BTN_FLAG_Contents:
-			checkDrawableId = R.mipmap.message_selected;
-			break;
+
 		case Constant.BTN_FLAG_Forum:
 			checkDrawableId = R.mipmap.contacts_selected;
 			break;

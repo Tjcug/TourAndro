@@ -20,7 +20,6 @@ import tour.com.activity.R;
 public class BottomControlPanel extends RelativeLayout implements View.OnClickListener {
     private Context mContext;
     private ImageText m_Assistant = null;
-    private ImageText m_Contents = null;
     private ImageText m_Forum = null;
     private ImageText m_Person=null;
     private int DEFALUT_BACKGROUND_COLOR = Color.rgb(243, 243, 243); //Color.rgb(192, 192, 192)
@@ -38,22 +37,15 @@ public class BottomControlPanel extends RelativeLayout implements View.OnClickLi
     protected void onFinishInflate() {
         // TODO Auto-generated method stub
         m_Assistant = (ImageText)findViewById(R.id.btn_Assistant);
-        m_Contents = (ImageText)findViewById(R.id.btn_Content);
         m_Forum = (ImageText)findViewById(R.id.btn_Forum);
         m_Person = (ImageText)findViewById(R.id.btn_Person);
 
         setBackgroundColor(DEFALUT_BACKGROUND_COLOR);
-        viewList.add(m_Contents);
         viewList.add(m_Forum);
         viewList.add(m_Assistant);
         viewList.add(m_Person);
     }
     public void initBottomPanel(){
-        if(m_Contents != null){
-            m_Contents.setImage(R.mipmap.message_unselected);
-            m_Contents.setText("主页");
-        }
-
         if(m_Forum != null){
             m_Forum.setImage(R.mipmap.contacts_unselected);
             m_Forum.setText("论坛");
@@ -89,10 +81,6 @@ public class BottomControlPanel extends RelativeLayout implements View.OnClickLi
         initBottomPanel();
         int index = -1;
         switch(v.getId()){
-            case R.id.btn_Content:
-                index = Constant.BTN_FLAG_Contents;
-                m_Contents.setChecked(Constant.BTN_FLAG_Contents);
-                break;
 
             case R.id.btn_Forum:
                 index = Constant.BTN_FLAG_Forum;
@@ -112,9 +100,10 @@ public class BottomControlPanel extends RelativeLayout implements View.OnClickLi
             mBottomCallback.onBottomPanelClick(index);
         }
     }
+
     public void defaultBtnChecked(){
-        if(m_Contents != null){
-            m_Contents.setChecked(Constant.BTN_FLAG_Contents);
+        if(m_Assistant != null){
+            m_Assistant.setChecked(Constant.BTN_FLAG_Assistant);
         }
     }
     @Override

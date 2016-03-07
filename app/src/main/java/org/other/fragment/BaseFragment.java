@@ -97,9 +97,7 @@ public class BaseFragment extends Fragment{
 
     public static BaseFragment newInstance(Context context,String tag){
         BaseFragment baseFragment =  null;
-        if(TextUtils.equals(tag, Constant.FRAGMENT_FLAG_Contents)){
-            baseFragment = new ContentFragment();
-        }else if(TextUtils.equals(tag, Constant.FRAGMENT_FLAG_Forum)){
+        if(TextUtils.equals(tag, Constant.FRAGMENT_FLAG_Forum)){
             baseFragment = new ForumFragment();
         }else if(TextUtils.equals(tag, Constant.FRAGMENT_FLAG_Assistant)){
             baseFragment = new AssistantFragment();
